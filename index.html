@@ -1,533 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Creative Studio | Modern Web Solutions</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mujir Shaikh | Portfolio</title>
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-      color: #333;
-      line-height: 1.6;
-      min-height: 100vh;
-      padding: 0;
-    }
+<style>
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Poppins",sans-serif;
+}
 
-    header {
-      background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
-      color: white;
-      padding: 20px 0;
-      border-radius: 0 0 20px 20px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+body{
+background: linear-gradient(135deg,#667eea,#764ba2);
+min-height:100vh;
+color:white;
+}
 
-    .header-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+}
 
-    .logo {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 2.2rem;
-      font-weight: 900;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+nav a{
+margin-left:20px;
+text-decoration:none;
+color:white;
+font-weight:500;
+}
 
-    .logo i {
-      color: #ffcc00;
-    }
+.hero{
+height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+}
 
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 30px;
-    }
+.hero-card{
+text-align:center;
+padding:50px;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 1.1rem;
-      padding: 8px 15px;
-      border-radius: 30px;
-      transition: all 0.3s ease;
-    }
+button{
+margin-top:20px;
+padding:12px 25px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+font-weight:bold;
+}
 
-    nav a:hover {
-      background-color: rgba(255, 255, 255, 0.2);
-      transform: translateY(-3px);
-    }
+section{
+padding:80px 10%;
+}
 
-    .hero {
-      padding: 100px 0;
-      text-align: center;
-      background: url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
-      border-radius: 20px;
-      margin: 30px 0;
-      position: relative;
-      color: white;
-      overflow: hidden;
-    }
+.card{
+padding:40px;
+}
 
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.6);
-      border-radius: 20px;
-    }
+.glass{
+background: rgba(255,255,255,0.15);
+backdrop-filter: blur(10px);
+border-radius:15px;
+border:1px solid rgba(255,255,255,0.3);
+}
 
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:15px;
+margin-top:20px;
+}
 
-    .hero h1 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 3.5rem;
-      margin-bottom: 20px;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    }
+.skills-grid span{
+background:rgba(255,255,255,0.2);
+padding:10px;
+border-radius:10px;
+text-align:center;
+}
 
-    .hero p {
-      font-size: 1.3rem;
-      margin-bottom: 30px;
-      opacity: 0.9;
-    }
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:20px;
+}
 
-    .btn {
-      display: inline-block;
-      background: linear-gradient(to right, #ff416c, #ff4b2b);
-      color: white;
-      padding: 15px 35px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.1rem;
-      border: none;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 5px 15px rgba(255, 65, 108, 0.4);
-    }
+.project{
+background:rgba(255,255,255,0.2);
+padding:20px;
+border-radius:10px;
+}
 
-    .btn:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(255, 65, 108, 0.6);
-    }
+footer{
+text-align:center;
+padding:30px;
+}
 
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin: 60px 0;
-    }
+</style>
 
-    .feature-card {
-      background: white;
-      border-radius: 15px;
-      padding: 30px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      text-align: center;
-    }
-
-    .feature-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
-    }
-
-    .feature-card i {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      color: #6a11cb;
-    }
-
-    .feature-card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 15px;
-      color: #333;
-    }
-
-    .content-section {
-      background: white;
-      border-radius: 15px;
-      padding: 50px;
-      margin: 60px 0;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    }
-
-    .content-section h2 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 2.5rem;
-      margin-bottom: 30px;
-      color: #2575fc;
-      text-align: center;
-    }
-
-    .content-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-
-    .content-item {
-      text-align: center;
-      padding: 25px;
-      border-radius: 10px;
-      background: #f8f9ff;
-      transition: all 0.3s ease;
-    }
-
-    .content-item:hover {
-      background: #eef1ff;
-      transform: scale(1.03);
-    }
-
-    .content-item h4 {
-      color: #6a11cb;
-      margin-bottom: 15px;
-      font-size: 1.3rem;
-    }
-
-    .stats {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      margin: 60px 0;
-      text-align: center;
-    }
-
-    .stat-item {
-      padding: 25px;
-    }
-
-    .stat-number {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 3.5rem;
-      font-weight: 900;
-      color: #2575fc;
-      display: block;
-    }
-
-    .stat-label {
-      font-size: 1.2rem;
-      color: #666;
-      margin-top: 10px;
-    }
-
-    footer {
-      background: linear-gradient(to right, #232526, #414345);
-      color: white;
-      padding: 50px 0 20px;
-      border-radius: 20px 20px 0 0;
-      margin-top: 60px;
-    }
-
-    .footer-content {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 40px;
-      margin-bottom: 40px;
-    }
-
-    .footer-section h3 {
-      font-size: 1.5rem;
-      margin-bottom: 25px;
-      position: relative;
-      padding-bottom: 10px;
-    }
-
-    .footer-section h3::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 50px;
-      height: 3px;
-      background: #ffcc00;
-    }
-
-    .social-icons {
-      display: flex;
-      gap: 15px;
-      margin-top: 20px;
-    }
-
-    .social-icons a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 50%;
-      color: white;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .social-icons a:hover {
-      background: #6a11cb;
-      transform: translateY(-5px);
-    }
-
-    .copyright {
-      text-align: center;
-      padding-top: 20px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      font-size: 0.9rem;
-      color: #aaa;
-    }
-
-    @media (max-width: 768px) {
-      .header-content {
-        flex-direction: column;
-        gap: 20px;
-      }
-      
-      nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-      
-      .content-section {
-        padding: 30px 20px;
-      }
-    }
-  </style>
 </head>
+
 <body>
-  <header>
-    <div class="container header-content">
-      <div class="logo">
-        <i class="fas fa-cube"></i>
-        <span>CreativeStudio</span>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
-  <div class="container">
-    <section class="hero" id="home">
-      <div class="hero-content">
-        <h1>Transform Your Digital Presence</h1>
-        <p>We create stunning, responsive websites that deliver exceptional user experiences and drive business growth. Our team of experts combines design innovation with cutting-edge technology.</p>
-        <a href="#contact" class="btn">Get Started Today</a>
-      </div>
-    </section>
+<header class="glass">
 
-    <section class="features" id="features">
-      <div class="feature-card">
-        <i class="fas fa-palette"></i>
-        <h3>Modern Design</h3>
-        <p>Beautiful, contemporary designs tailored to your brand identity and target audience. We create visually appealing interfaces that engage users.</p>
-      </div>
-      <div class="feature-card">
-        <i class="fas fa-mobile-alt"></i>
-        <h3>Fully Responsive</h3>
-        <p>Your website will look perfect on all devices - from desktop computers to smartphones and tablets. We ensure seamless user experience everywhere.</p>
-      </div>
-      <div class="feature-card">
-        <i class="fas fa-rocket"></i>
-        <h3>Fast Performance</h3>
-        <p>Optimized for speed and performance. We implement best practices to ensure your site loads quickly, improving SEO and user retention.</p>
-      </div>
-    </section>
+<h2>Mujir Shaikh</h2>
 
-    <div class="stats">
-      <div class="stat-item">
-        <span class="stat-number">250+</span>
-        <span class="stat-label">Projects Completed</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number">99%</span>
-        <span class="stat-label">Client Satisfaction</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number">50+</span>
-        <span class="stat-label">Team Members</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number">10+</span>
-        <span class="stat-label">Years Experience</span>
-      </div>
-    </div>
+<nav>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
 
-    <section class="content-section" id="about">
-      <h2>Why Choose Creative Studio?</h2>
-      <p>We are a passionate team of designers, developers, and digital strategists dedicated to creating exceptional online experiences. Our approach combines creative thinking with technical expertise to deliver solutions that not only look great but also perform brilliantly.</p>
-      
-      <div class="content-grid">
-        <div class="content-item">
-          <h4>Custom Solutions</h4>
-          <p>Every project is unique. We create tailored solutions that address your specific business goals and challenges.</p>
-        </div>
-        <div class="content-item">
-          <h4>Ongoing Support</h4>
-          <p>Our relationship doesn't end at launch. We provide comprehensive support and maintenance to keep your site running smoothly.</p>
-        </div>
-        <div class="content-item">
-          <h4>SEO Optimized</h4>
-          <p>We build websites with search engine optimization in mind, helping you rank higher and attract more organic traffic.</p>
-        </div>
-        <div class="content-item">
-          <h4>Security Focused</h4>
-          <p>Your security is our priority. We implement the latest security protocols to protect your website and user data.</p>
-        </div>
-      </div>
-    </section>
+</header>
 
-    <section class="content-section" id="services">
-      <h2>Our Services</h2>
-      <p>We offer a comprehensive range of digital services to help your business thrive online. From initial concept to final implementation and beyond, we're with you every step of the way.</p>
-      
-      <div class="content-grid">
-        <div class="content-item">
-          <i class="fas fa-laptop-code fa-2x" style="color: #6a11cb; margin-bottom: 15px;"></i>
-          <h4>Web Development</h4>
-          <p>Custom website development using the latest technologies and frameworks.</p>
-        </div>
-        <div class="content-item">
-          <i class="fas fa-shopping-cart fa-2x" style="color: #6a11cb; margin-bottom: 15px;"></i>
-          <h4>E-commerce Solutions</h4>
-          <p>Build online stores with secure payment processing and inventory management.</p>
-        </div>
-        <div class="content-item">
-          <i class="fas fa-search fa-2x" style="color: #6a11cb; margin-bottom: 15px;"></i>
-          <h4>SEO & Marketing</h4>
-          <p>Improve your online visibility and attract more customers with our SEO strategies.</p>
-        </div>
-        <div class="content-item">
-          <i class="fas fa-pencil-alt fa-2x" style="color: #6a11cb; margin-bottom: 15px;"></i>
-          <h4>Content Creation</h4>
-          <p>Engaging content that tells your brand story and connects with your audience.</p>
-        </div>
-      </div>
-    </section>
-  </div>
+<section class="hero">
 
-  <footer id="contact">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>Creative Studio</h3>
-          <p>We create digital experiences that inspire, engage, and deliver results. Let's build something amazing together.</p>
-          <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          </div>
-        </div>
-        <div class="footer-section">
-          <h3>Contact Info</h3>
-          <p><i class="fas fa-map-marker-alt"></i> 123 Design Street, Creative City</p>
-          <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
-          <p><i class="fas fa-envelope"></i> info@creativestudio.com</p>
-        </div>
-        <div class="footer-section">
-          <h3>Quick Links</h3>
-          <ul style="list-style: none;">
-            <li><a href="#home" style="color: white; text-decoration: none; line-height: 2;">Home</a></li>
-            <li><a href="#features" style="color: white; text-decoration: none; line-height: 2;">Features</a></li>
-            <li><a href="#about" style="color: white; text-decoration: none; line-height: 2;">About Us</a></li>
-            <li><a href="#services" style="color: white; text-decoration: none; line-height: 2;">Services</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="copyright">
-        <p>&copy; 2023 Creative Studio. All rights reserved. | Designed with <i class="fas fa-heart" style="color: #ff416c;"></i> for the digital world.</p>
-      </div>
-    </div>
-  </footer>
+<div class="glass hero-card">
 
-  <!-- Tidio Chat Script -->
-  <script src="//code.tidio.co/uxnn5hkmwcewjte8wq8n7zzhdjm6lkq9.js" async></script>
-  
-  <!-- Smooth Scrolling Script -->
-  <script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        const targetId = this.getAttribute('href');
-        if(targetId === '#') return;
-        
-        const targetElement = document.querySelector(targetId);
-        if(targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop - 80,
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
+<h1>Hello 👋</h1>
+<h2>I'm Mujir Shaikh</h2>
 
-    // Simple animation on scroll
-    const observerOptions = {
-      threshold: 0.1
-    };
+<p>Full Stack Developer & Programmer</p>
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, observerOptions);
+<button onclick="scrollToSection('projects')">View Projects</button>
 
-    // Observe elements for animation
-    document.addEventListener('DOMContentLoaded', function() {
-      const elementsToAnimate = document.querySelectorAll('.feature-card, .content-item, .stat-item');
-      
-      elementsToAnimate.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-        observer.observe(el);
-      });
-    });
-  </script>
+</div>
+
+</section>
+
+<section id="about">
+
+<div class="glass card">
+
+<h2>About Me</h2>
+
+<p>
+I am a passionate developer skilled in web development,
+backend development, and Android application development.
+I enjoy building modern websites, web applications and mobile apps.
+</p>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<div class="glass card">
+
+<h2>Skills</h2>
+
+<div class="skills-grid">
+
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
+<span>Java</span>
+<span>C Programming</span>
+<span>C++</span>
+<span>PHP</span>
+<span>Laravel</span>
+<span>Python</span>
+<span>Django</span>
+<span>Kotlin (Android)</span>
+<span>R Programming</span>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<div class="glass card">
+
+<h2>Projects</h2>
+
+<div class="projects">
+
+<div class="project">
+<h3>Portfolio Website</h3>
+<p>Personal portfolio built using HTML, CSS and JavaScript.</p>
+</div>
+
+<div class="project">
+<h3>Android App</h3>
+<p>Android application developed using Kotlin.</p>
+</div>
+
+<div class="project">
+<h3>Django Web App</h3>
+<p>Web application built using Python and Django framework.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<div class="glass card">
+
+<h2>Contact</h2>
+
+<p>Email: your@email.com</p>
+<p>GitHub: github.com/yourusername</p>
+
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 Mujir Shaikh</p>
+</footer>
+
+<script>
+
+function scrollToSection(id){
+document.getElementById(id).scrollIntoView({
+behavior:"smooth"
+});
+}
+
+</script>
+
 </body>
 </html>
